@@ -17,7 +17,8 @@ html {
 
     /* padding */
 
-    --padding: 25px;
+    --padding-medium: 25px;
+    --padding-small: 15px;
 }
 
 /* Body  */
@@ -34,7 +35,7 @@ body {
 
 .header {
     grid-column: 2;
-    padding: var(--padding);
+    padding: var(--padding-medium);
 }
 
 /* Main */
@@ -45,13 +46,24 @@ body {
     grid-column: 2;
 }
 
+.card {
+    background-color: var(--white);
+    padding: var(--padding-small);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--padding-medium);
+}
+
 /* Sidebar */
 .sidebar {
     background-color: var(--celestial-blue);
     color: var(--white);
     grid-column: 1 / 2;
     grid-row: 1 /  3;
-    padding: var(--padding);
+    padding: var(--padding-medium);
 }
 
 .sidebar ul {
