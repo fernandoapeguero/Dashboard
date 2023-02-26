@@ -14,14 +14,22 @@ html {
     --celestial-blue: #058ed9ff;
     --coral: #fa824cff;
     --platinum: #e6e6e6ff;
+    --gray: rgb(163, 163, 163);
 
     /* padding */
 
     --padding-medium: 25px;
     --padding-small: 15px;
+
+    /* Radius */
+
+    --radius-large: 50px
+    --radius-medium: 25px
+    --radius-small: 15px;
+
 }
 
-/* Body  */
+/* General */
 
 body {
     display: grid;
@@ -29,6 +37,11 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-top: 0;
 }
 
 /* Header */
@@ -44,19 +57,84 @@ body {
     padding: 25px;
     background-color: var(--platinum);
     grid-column: 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    gap: 20px;
 }
 
 .card {
     background-color: var(--white);
     padding: var(--padding-small);
+    border-radius: 15px;
+    min-height: 200px;
 }
 
-.projects {
+.card p {
+    color: var(--gray);
+}
+.projects{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--padding-medium);
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
 }
 
+.projects-holder {
+    grid-row: 1 / 3;
+}
+
+
+.announcements {
+
+    grid-column: 2 / -1;
+
+}
+
+.announcement-news {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: var(--padding-medium);
+    list-style: none;
+}
+
+.announcement-news h4 {
+    font-size: .8rem;
+    margin-bottom: 0;
+}
+
+.announcements p {
+    color: var(--gray);
+    margin-top: 5px;
+    font-size: .8rem;    
+}
+
+.announcement-news li:not(:last-of-type) {
+    border-bottom: solid 1px rgba(117, 117, 117, 0.5);
+}
+
+
+.trending h5 , .trending p {
+    margin: 0;
+}
+
+.trending {
+    grid-column: 2 / -1;
+}
+
+.trending li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+}
+
+.trending-users {
+    list-style: none;
+    background-color: var(--white);
+    padding: var(--padding-small);
+    border-radius: 10px;
+}
 /* Sidebar */
 .sidebar {
     background-color: var(--celestial-blue);
