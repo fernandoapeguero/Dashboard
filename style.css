@@ -15,6 +15,7 @@ html {
     --coral: #fa824cff;
     --platinum: #e6e6e6ff;
     --gray: rgb(163, 163, 163);
+    --light-blue: rgba(181, 204, 216, .5);
 
     /* padding */
 
@@ -70,6 +71,14 @@ h2, h3{
     height: auto;
     width: var(--img-small);
     border-radius: 50px;
+}
+
+.search input {
+    background-color: var(--light-blue);
+    border: none;
+    border-radius: 50px;
+    height: 30px;
+    padding: 10px;
 }
 
 .header-user {
