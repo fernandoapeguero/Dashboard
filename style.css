@@ -69,6 +69,7 @@ a {
     grid-column: 2;
     padding: var(--padding-medium);
     box-shadow: 0px 5px 18px -2px rgba(0,0,0,0.75);
+    height: auto;
 }
 
 .search {
